@@ -1,4 +1,4 @@
-# listomatic
+# list-o-matic
 
 A simple list application to demonstrate web development
 concepts. Uses the Flask web development framework, with Twitter for
