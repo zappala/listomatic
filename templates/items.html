@@ -1,0 +1,55 @@
+<div class="title">
+<p>To Do</p>
+</div>
+
+<div id="heading" class="row">
+<div class="col-md-6">
+Item
+</div>
+<div class="col-md-6">
+Due
+</div>
+</div>
+{% for item in items %}
+<div class="row item">
+<div class="col-md-6">
+<input type="checkbox" name="completed" value="done" onclick="javascript:done({{item.id}},'{{search}}');"> <a href="#" class="item-text" data-time="text" data-pk={{ item.id }} data-url="/edit-text" data-title="Enter item">{{ item.text }}</a>
+</div>
+<div class="col-md-5">
+<a href="#" class="item-due" data-type="combodate" data-format="YYYY-MM-DD" data-viewformat="D MMMM YYYY" data-template="D MMMM YYYY" data-pk={{ item.id }} data-url="/edit-date" data-title="Choose date">{{ item.due.strftime('%d %B %Y') }}</a>
+</div>
+<div class="col-md-1">
+<button type="button" class="btn btn-default btn-xs" onclick="javascript:del({{item.id}});"><span class="glyphicon glyphicon-minus"></span></button>
+</div>
+</div>
+{% endfor %}
+
+<div class="title">
+<p>Completed</p>
+</div>
+
+<div id="heading" class="row">
+<div class="col-md-6">
+Item
+</div>
+<div class="col-md-6">
+Due
+</div>
+</div>
+{% for item in completed %}
+<div class="row item">
+<div class="col-md-6">
+<input type="checkbox" name="completed" value="done" onclick="javascript:undo({{item.id}},'{{search}}');" checked> <a href="#" class="item-text" data-type="text" data-pk={{ item.id }} data-url="/edit-text" data-title="Enter item">{{ item.text }}</a>
+</div>
+<div class="col-md-5">
+<a href="#" class="item-due" data-type="combodate" data-format="YYYY-MM-DD" data-viewformat="D MMMM YYYY" data-template="D MMMM YYYY" data-pk={{ item.id }} data-url="/edit-date" data-title="Choose date">{{ item.due.strftime('%d %B %Y') }}</a>
+</div>
+<div class="col-md-1">
+<button type="button" class="btn btn-default btn-xs" onclick="javascript:del({{item.id}},'{{search}}');"><span class="glyphicon glyphicon-minus"></span></button>
+</div>
+</div>
+{% endfor %}
+
+{% if not items and not completed %}
+<p></p><p>Create the first item in your list!</p>
+{% endif %}

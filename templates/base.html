@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>{% block title %}List-o-matic{% endblock %}</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+    <link href="/static/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Romanesco' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/app.css" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="/">List-o-matic</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      {% if login %}
+	<form method="get" action="/search" id="item-submit" class="navbar-form navbar-left" role="search">
+	  <div class="form-group">
+            <input name="search" type="text" class="form-control" placeholder="Search">
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	{% endif %}
+	<ul class="nav navbar-nav navbar-right">
+	  {% if login %}
+	  <li><a href="/auth/logout">Logout</a></li>
+	  {% else %}
+	  <li><a href="/auth/login"><img src="/static/img/sign-in-with-twitter-gray.png"></a></li>
+	  {% endif %}
+	</ul>
+      </div><!-- /.navbar-collapse -->
+      <div>
+  </nav>
+
+  <div id="content" class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <script src="/static/bootstrap/js/jquery-1.10.2.min.js"></script>
+  <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/static/bootstrap3-editable/js/bootstrap-editable.js"></script>
+  <script src="/static/bootstrap3-editable/js/moment.min.js"></script>
+  {% block scripts %}
+  {% endblock %}
+</body>
+</html>

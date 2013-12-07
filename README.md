@@ -1,4 +1,5 @@
-listomatic
-==========
+# listomatic
 
-Simple list application in Flask
+A simple list application to demonstrate web development concepts.
+
+
