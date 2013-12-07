@@ -1,6 +1,9 @@
 # listomatic
 
-A simple list application to demonstrate web development concepts.
+A simple list application to demonstrate web development
+concepts. Uses the Flask web development framework, with Twitter for
+login, Bootstrap for styles, X-editable for inline editing, and
+SQLAlchemy as an ORM.
 
 ## Dependencies
 
