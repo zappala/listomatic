@@ -74,7 +74,8 @@ def search():
     search = request.args.get('search','')
     name = current_user.username
     if not search:
-        items = current_user.items.all()
+        items = current_user.items.filter_by(completed=False).order_by(Item.due)
+        completed = current_user.items.filter_by(completed=True).order_by(Item.due)
     else:
         items = current_user.items.filter(Item.text.contains(search)).filter_by(completed=False).order_by(Item.due)
         completed = current_user.items.filter(Item.text.contains(search)).filter_by(completed=True).order_by(Item.due)
