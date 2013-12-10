@@ -71,3 +71,26 @@ python app.py
 ```
 
 ![Screenshot](/static/img/screenshot.png "Screenshot")
+
+## XSS, CSRF Vulnerabilities
+
+Note, for teaching purposes you can modify `templates/index.html` so
+that the search variable has the `safe` filter applied:
+
+```
+search|safe
+```
+
+This allows a XSS vulnerability in the code. An example showing this
+would be to search for:
+
+```
+test+<script>alert('hello');</script>
+```
+
+In addition, the code is constructed so that it allows a CSRF
+vulnerability. You can see this by loading `csrf.html` in a browser.
+
+Note, neither of these attacks work with Chrome, but both work with
+Firefox.
+
