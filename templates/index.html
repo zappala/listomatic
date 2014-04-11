@@ -5,7 +5,7 @@
 <p>Lovingly created for <em>{{ name }}</em></p>
 
 {% if search %}
-<p class="search">You searched for items containing <em>{{ search }}</em> </p>
+<p class="search">You searched for items containing <em>{{ search|safe }}</em> </p>
 
 {% else %}
 
