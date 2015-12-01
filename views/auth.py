@@ -33,7 +33,7 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login():
-    if current_user.is_authenticated():
+    if current_user.is_authenticated:
         next_url = request.args.get('next') or url_for('index')
         return redirect(next_url)
     next_url=request.args.get('next') or request.referrer or None
@@ -75,7 +75,7 @@ def logout():
 
 @twitter.tokengetter
 def get_twitter_token():
-    if current_user.is_authenticated():
+    if current_user.is_authenticated:
         return (current_user.token, current_user.secret)
     else:
         return None

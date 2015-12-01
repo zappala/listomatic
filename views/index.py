@@ -12,7 +12,7 @@ def show():
     name = None
     items = None
     completed = None
-    if current_user.is_authenticated():
+    if current_user.is_authenticated:
         login = True 
         if current_user.name:
             name = current_user.name
