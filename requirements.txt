@@ -6,7 +6,7 @@ blivet==1.0.10
 cffi==0.8.6
 chardet==2.2.1
 coverage==4.0
-cryptography==0.9
+cryptography==3.2
 cssselect==0.9.1
 decorator==3.4.0
 dockerfile-parse==0.0.5
