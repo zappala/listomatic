@@ -23,7 +23,7 @@ idna==2.0
 iniparse==0.4
 ipaddress==1.0.7
 IPy==0.81
-Jinja2==2.7.3
+Jinja2==2.11.3
 kitchen==1.2.1
 langtable==0.0.34
 lockfile==0.10.2
