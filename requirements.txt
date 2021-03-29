@@ -49,7 +49,7 @@ pycparser==2.10
 pycrypto==2.6.1
 pycurl==7.19.5.1
 PyGithub==1.25.2
-Pygments==1.6
+Pygments==2.7.4
 pygobject==3.16.2
 pygpgme==0.3
 pyinotify==0.9.6
