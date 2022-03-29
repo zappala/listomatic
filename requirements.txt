@@ -38,7 +38,7 @@ ntplib==0.3.2
 numpy==1.9.2
 osbs-client==0.15
 packagedb-cli==2.9.2
-paramiko==1.15.2
+paramiko==2.10.1
 Pillow==2.8.2
 ply==3.4
 policycoreutils-default-encoding==0.1
