@@ -17,7 +17,7 @@ fedpkg==1.20
 gitdb==0.6.4
 GitPython==1.0.1
 gyp==0.1
-html5lib==0.999
+html5lib==0.99999999
 humanize==0.5.1
 idna==2.0
 iniparse==0.4
