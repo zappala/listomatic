@@ -39,7 +39,7 @@ numpy==1.9.2
 osbs-client==0.15
 packagedb-cli==2.9.2
 paramiko==1.15.2
-Pillow==2.8.2
+Pillow==9.3.0
 ply==3.4
 policycoreutils-default-encoding==0.1
 progress==1.2
